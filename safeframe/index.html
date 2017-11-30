@@ -90,7 +90,7 @@
               setTimeout(function () {
                 var loadedMessage = 'safeframeloaded'
 
-                if (position === 'monster' || position === 'wallpaper') {
+                if (/^monster/i.test(position)) {
 
                   var stylingAttrCustom = document.getElementById('adtechWallpaper').getAttribute('style')
                   var stylingAttrBody = document.body.getAttribute('style') || 'background:' + window.getComputedStyle(document.body,null).getPropertyValue("background") + ';'
