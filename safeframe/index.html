@@ -73,7 +73,7 @@
         debug.setup(location.href.indexOf('debug=true') !== -1)
 
         var position = $sf.ext.meta('banner_position')
-        if (position === 'intextbanner') {
+	      if (/^intext/i.test(position)) {
             $sf.ext.register(930, 180, status_update)
         }
         var sf_align = document.getElementById('sf_align')
