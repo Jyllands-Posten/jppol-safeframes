@@ -108,6 +108,12 @@
                 } else if (sf_align.querySelector('.prebidPlaceholder_xhb') !== null) {
                   loadedMessage += '|prebid_xhb'
                 } else {
+                	if(sf_align.clientWidth === 0 || sf_align.clientHeight === 0) {
+		                debug.log('safeframes: inside safeframe', position, ' will be nuked')
+		                $sf.ext.message('nuke')
+	                    return;
+                    }
+
                   loadedMessage += '|w' + sf_align.clientWidth + '|h' + sf_align.clientHeight
                 }
 
