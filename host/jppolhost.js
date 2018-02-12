@@ -64,18 +64,13 @@
   }
 
   // <%-- blue kai . key value --%>
-  if (typeof bk_results !== 'undefined' && typeof bk_results.campaigns !== 'undefined') {
-    adtechKv.bkcmpid = []
-    adtechKv.bkuuid = []
-    for (var i in bk_results.campaigns) {
-      adtechKv.bkcmpid.push(bk_results.campaigns[i].campaign)
-      adtechKv.bkuuid.push(bk_results.campaigns[i].bkuuid)
+  if (typeof adform_segments !== 'undefined') {
+    adtechKv.RefID = [];
+    adtechKv.uid = [];
+    for (var i in adform_segments) {
+      adtechKv.RefID.push(adform_segments[i].RefID);
+      adtechKv.uid.push(adform_segments[i].RefID);
     }
-
-    var metatag = document.createElement('meta')
-    metatag.name = ['WS-Custom-Targeting']
-    metatag.content = ['bkcmpid='] + adtechKv.bkcmpid.join('&') + [';bkuuid='] + adtechKv.bkuuid.join('&')
-    document.getElementsByTagName('head')[0].appendChild(metatag)
   }
 
   var adtechKvArr = []

@@ -316,7 +316,7 @@ var positionData = {
 ### keyValues
 * optional [array]
 
-Key values to be added to banner called besides criteo, bluekai and rubicon key values
+Key values to be added to banner called besides criteo, adform and rubicon key values
 Could be prebid key values
 
 ```js
