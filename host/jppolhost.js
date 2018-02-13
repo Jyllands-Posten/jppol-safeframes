@@ -63,13 +63,11 @@
     adtechKv = adtechKvAdder(crtg_content, adtechKv)
   }
 
-  // <%-- blue kai . key value --%>
+  // <%-- adform . key value --%>
   if (typeof adform_segments !== 'undefined') {
     adtechKv.RefID = [];
-    adtechKv.uid = [];
     for (var i in adform_segments) {
       adtechKv.RefID.push(adform_segments[i].RefID);
-      adtechKv.uid.push(adform_segments[i].RefID);
     }
   }
 
